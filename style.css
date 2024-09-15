@@ -1,0 +1,30 @@
+.container{
+    display: grid;
+    grid-template-columns:1fr 1fr 1fr 1fr ;
+    gap:20px;
+}
+.img-container{
+    border-radius: 20px;
+    border:1px solid black;
+    padding:10px;
+    box-shadow: 1px 1px black;
+}
+
+/* Media query for tablets (max-width: 768px) */
+@media screen and (max-width: 768px) {
+    .container {
+        grid-template-columns: repeat(3, 1fr); /* 3 columns for tablets */
+    }
+}
+
+/* Media query for phones (max-width: 600px) */
+@media screen and (max-width: 600px) {
+    .container {
+        grid-template-columns: 1fr; /* 1 column for phones */
+        gap: 15px; /* Adjust gap if needed */
+        width: 100%; /* Use full width for phones */
+    }
+    img{
+        width:100%;
+    }
+}
